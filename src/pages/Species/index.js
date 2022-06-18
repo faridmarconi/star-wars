@@ -4,12 +4,11 @@ import axios from "axios";
 import { Container, Row, Col } from 'reactstrap';
 import Button from 'react-bootstrap/Button';
 
-
 const App = () => {
-    const [hex, setHex] = useState("https://swapi.dev/api/people/1/");
+    const [hex, setHex] = useState("https://swapi.dev/api/species/1/");
 
     const alteraCard = () => {
-        const randomCard = "https://swapi.dev/api/people/" + Math.floor(Math.random()*82 + 1) + "/";
+        const randomCard = "https://swapi.dev/api/species/" + Math.floor(Math.random()*37 + 1) + "/";
         setHex(randomCard);
     };
 
@@ -48,14 +47,14 @@ const App = () => {
                     <Col md="auto">
 
                     <h1 className="text-center font-weight-bold text-white">{post.name}</h1>
-                    <p className="text-center text-uppercase text-white">Gender: {post.gender}</p>
+                    <p className="text-center text-uppercase text-white">Classification: {post.classification}</p>
 
                     </Col>
                 </Row>
 
                 <Row className="justify-content-md-center">
                     <Col md="auto">
-                    <div className="text-center text-dark">
+                    <div className="text-center text-secondary">
                     <Button className="text-center mb-1" variant="outline-light" onClick={alteraCard}>Escolher outro</Button>
 
                     <br/>
