@@ -20,6 +20,4 @@
 * [Tecnologias utilizadas](#tecnologias-utilizadas)
 <br/>Node / React / react-router-dom / axios / bootstrap
 * [Documentação Utilizada](#tecnologias-utilizadas)
-<br/>
-* [swapi](https://swapi.dev/api/)
-* [stars background](http://www.script-tutorials.com/night-sky-with-twinkling-stars/)
+<br/>APi [swapi](https://swapi.dev/api/) css style stars [stars background](http://www.script-tutorials.com/night-sky-with-twinkling-stars/)
