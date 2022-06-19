@@ -13,28 +13,16 @@ const App = () => {
         setHex(randomCard);
     };
 
-    var url = hex;
 
-    const [post, setPost] = React.useState(url);
-    const [error, setError] = React.useState(null);
+    const [post, setPost] = React.useState(hex);
 
     React.useEffect(() => {
-        axios.get(url).then((response) => {
+        axios.get(hex).then((response) => {
           setPost(response.data);
-        }).catch(error => {
-            if (error.response) {
-                // The client was given an error response (5xx, 4xx)
-                return alteraCard();
-            } else {
-                // Anything else
-                setError(error);
-            }
-            //setError(error);
-          });
+        });
       },);
-
-        if (error) return `Error: ${error.message}`;
-        if (!post) return "No post!"
+    
+      if (!post) return null;
     
   
     return(
